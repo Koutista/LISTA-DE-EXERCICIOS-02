@@ -1,0 +1,61 @@
+<html>
+<head>
+<title>exercicio9.java</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.s0 { color: #cf8e6d;}
+.s1 { color: #bcbec4;}
+.s2 { color: #bcbec4;}
+.s3 { color: #7a7e85;}
+.s4 { color: #6aab73;}
+.s5 { color: #2aacb8;}
+</style>
+</head>
+<body bgcolor="#1e1f22">
+<table CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#606060" >
+<tr><td><center>
+<font face="Arial, Helvetica" color="#000000">
+exercicio9.java</font>
+</center></td></tr></table>
+<pre><span class="s0">import </span><span class="s1">java</span><span class="s2">.</span><span class="s1">util</span><span class="s2">.</span><span class="s1">Scanner</span><span class="s2">;</span>
+
+<span class="s0">public class </span><span class="s1">exercicio9 </span><span class="s2">{</span>
+
+    <span class="s0">public static void </span><span class="s1">main</span><span class="s2">(</span><span class="s1">String</span><span class="s2">[] </span><span class="s1">args</span><span class="s2">) {</span>
+
+        <span class="s3">/*Ler o salário de um funcionário e o tempo de casa em anos. 
+Definir o bônus: menos de 1 ano não recebe, de 1 a 3 anos 
+recebe 5 por cento, acima de 3 e até 10 anos recebe 10 por 
+cento, acima de 10 anos recebe 15 por cento. Imprimir o 
+percentual e o valor do bônus.*/</span>
+
+        <span class="s1">Scanner sc </span><span class="s2">= </span><span class="s0">new </span><span class="s1">Scanner</span><span class="s2">(</span><span class="s1">System</span><span class="s2">.</span><span class="s1">in</span><span class="s2">);</span>
+
+        <span class="s1">System</span><span class="s2">.</span><span class="s1">out</span><span class="s2">.</span><span class="s1">print</span><span class="s2">(</span><span class="s4">&quot;Digite o salário do funcionário: &quot;</span><span class="s2">);</span>
+        <span class="s0">double </span><span class="s1">salario </span><span class="s2">= </span><span class="s1">sc</span><span class="s2">.</span><span class="s1">nextDouble</span><span class="s2">();</span>
+
+        <span class="s1">System</span><span class="s2">.</span><span class="s1">out</span><span class="s2">.</span><span class="s1">print</span><span class="s2">(</span><span class="s4">&quot;Digite o tempo de casa (anos): &quot;</span><span class="s2">);</span>
+        <span class="s0">double </span><span class="s1">tempoCasa </span><span class="s2">= </span><span class="s1">sc</span><span class="s2">.</span><span class="s1">nextDouble</span><span class="s2">();</span>
+
+        <span class="s0">double </span><span class="s1">percentual</span><span class="s2">;</span>
+
+        <span class="s0">if </span><span class="s2">(</span><span class="s1">tempoCasa </span><span class="s2">&lt; </span><span class="s5">1</span><span class="s2">) {</span>
+            <span class="s1">percentual </span><span class="s2">= </span><span class="s5">0</span><span class="s2">;</span>
+        <span class="s2">} </span><span class="s0">else if </span><span class="s2">(</span><span class="s1">tempoCasa </span><span class="s2">&lt;= </span><span class="s5">3</span><span class="s2">) {</span>
+            <span class="s1">percentual </span><span class="s2">= </span><span class="s5">5</span><span class="s2">;</span>
+        <span class="s2">} </span><span class="s0">else if </span><span class="s2">(</span><span class="s1">tempoCasa </span><span class="s2">&lt;= </span><span class="s5">10</span><span class="s2">) {</span>
+            <span class="s1">percentual </span><span class="s2">= </span><span class="s5">10</span><span class="s2">;</span>
+        <span class="s2">} </span><span class="s0">else </span><span class="s2">{</span>
+            <span class="s1">percentual </span><span class="s2">= </span><span class="s5">15</span><span class="s2">;</span>
+        <span class="s2">}</span>
+
+        <span class="s0">double </span><span class="s1">valorBonus </span><span class="s2">= </span><span class="s1">salario </span><span class="s2">* (</span><span class="s1">percentual </span><span class="s2">/ </span><span class="s5">100</span><span class="s2">);</span>
+
+        <span class="s1">System</span><span class="s2">.</span><span class="s1">out</span><span class="s2">.</span><span class="s1">printf</span><span class="s2">(</span><span class="s4">&quot;Percentual de bônus: %.2f%%%n&quot;</span><span class="s2">, </span><span class="s1">percentual</span><span class="s2">);</span>
+        <span class="s1">System</span><span class="s2">.</span><span class="s1">out</span><span class="s2">.</span><span class="s1">printf</span><span class="s2">(</span><span class="s4">&quot;Valor do bônus: R$ %.2f%n&quot;</span><span class="s2">, </span><span class="s1">valorBonus</span><span class="s2">);</span>
+
+        <span class="s1">sc</span><span class="s2">.</span><span class="s1">close</span><span class="s2">();</span>
+    <span class="s2">}</span>
+<span class="s2">}</span></pre>
+</body>
+</html>

@@ -1,0 +1,62 @@
+<html>
+<head>
+<title>exercicio13.java</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.s0 { color: #cf8e6d;}
+.s1 { color: #bcbec4;}
+.s2 { color: #bcbec4;}
+.s3 { color: #7a7e85;}
+.s4 { color: #6aab73;}
+.s5 { color: #2aacb8;}
+</style>
+</head>
+<body bgcolor="#1e1f22">
+<table CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#606060" >
+<tr><td><center>
+<font face="Arial, Helvetica" color="#000000">
+exercicio13.java</font>
+</center></td></tr></table>
+<pre><span class="s0">import </span><span class="s1">java</span><span class="s2">.</span><span class="s1">util</span><span class="s2">.</span><span class="s1">Scanner</span><span class="s2">;</span>
+
+<span class="s0">public class </span><span class="s1">exercicio13 </span><span class="s2">{</span>
+
+    <span class="s0">public static void </span><span class="s1">main</span><span class="s2">(</span><span class="s1">String</span><span class="s2">[] </span><span class="s1">args</span><span class="s2">) {</span>
+
+        <span class="s3">/*Ler dois números do tipo double e uma opção de 1 a 4, 
+onde 1 é soma, 2 é subtração, 3 é multiplicação e 4 é divisão. 
+Usar switch para executar a operação escolhida e imprimir o 
+resultado. Qualquer outra opção cai no default como opção 
+inválida. Na divisão, verificar antes se o divisor é zero.*/</span>
+
+        <span class="s1">Scanner sc </span><span class="s2">= </span><span class="s0">new </span><span class="s1">Scanner</span><span class="s2">(</span><span class="s1">System</span><span class="s2">.</span><span class="s1">in</span><span class="s2">);</span>
+
+        <span class="s1">System</span><span class="s2">.</span><span class="s1">out</span><span class="s2">.</span><span class="s1">print</span><span class="s2">(</span><span class="s4">&quot;Digite o primeiro número: &quot;</span><span class="s2">);</span>
+        <span class="s0">double </span><span class="s1">num1 </span><span class="s2">= </span><span class="s1">sc</span><span class="s2">.</span><span class="s1">nextDouble</span><span class="s2">();</span>
+
+        <span class="s1">System</span><span class="s2">.</span><span class="s1">out</span><span class="s2">.</span><span class="s1">print</span><span class="s2">(</span><span class="s4">&quot;Digite o segundo número: &quot;</span><span class="s2">);</span>
+        <span class="s0">double </span><span class="s1">num2 </span><span class="s2">= </span><span class="s1">sc</span><span class="s2">.</span><span class="s1">nextDouble</span><span class="s2">();</span>
+
+        <span class="s1">System</span><span class="s2">.</span><span class="s1">out</span><span class="s2">.</span><span class="s1">print</span><span class="s2">(</span><span class="s4">&quot;Escolha a operação (1-Soma, 2-Subtração, 3-Multiplicação, 4-Divisão): &quot;</span><span class="s2">);</span>
+        <span class="s0">int </span><span class="s1">opcao </span><span class="s2">= </span><span class="s1">sc</span><span class="s2">.</span><span class="s1">nextInt</span><span class="s2">();</span>
+
+        <span class="s0">switch </span><span class="s2">(</span><span class="s1">opcao</span><span class="s2">) {</span>
+            <span class="s0">case </span><span class="s5">1 </span><span class="s1">-&gt; System</span><span class="s2">.</span><span class="s1">out</span><span class="s2">.</span><span class="s1">printf</span><span class="s2">(</span><span class="s4">&quot;Resultado: %.2f%n&quot;</span><span class="s2">, </span><span class="s1">num1 </span><span class="s2">+ </span><span class="s1">num2</span><span class="s2">);</span>
+            <span class="s0">case </span><span class="s5">2 </span><span class="s1">-&gt; System</span><span class="s2">.</span><span class="s1">out</span><span class="s2">.</span><span class="s1">printf</span><span class="s2">(</span><span class="s4">&quot;Resultado: %.2f%n&quot;</span><span class="s2">, </span><span class="s1">num1 </span><span class="s2">- </span><span class="s1">num2</span><span class="s2">);</span>
+            <span class="s0">case </span><span class="s5">3 </span><span class="s1">-&gt; System</span><span class="s2">.</span><span class="s1">out</span><span class="s2">.</span><span class="s1">printf</span><span class="s2">(</span><span class="s4">&quot;Resultado: %.2f%n&quot;</span><span class="s2">, </span><span class="s1">num1 </span><span class="s2">* </span><span class="s1">num2</span><span class="s2">);</span>
+            <span class="s0">case </span><span class="s5">4 </span><span class="s1">-&gt; </span><span class="s2">{</span>
+                <span class="s0">if </span><span class="s2">(</span><span class="s1">num2 </span><span class="s2">== </span><span class="s5">0</span><span class="s2">) {</span>
+                    <span class="s1">System</span><span class="s2">.</span><span class="s1">out</span><span class="s2">.</span><span class="s1">println</span><span class="s2">(</span><span class="s4">&quot;Não é possível dividir por zero.&quot;</span><span class="s2">);</span>
+                <span class="s2">} </span><span class="s0">else </span><span class="s2">{</span>
+                    <span class="s1">System</span><span class="s2">.</span><span class="s1">out</span><span class="s2">.</span><span class="s1">printf</span><span class="s2">(</span><span class="s4">&quot;Resultado: %.2f%n&quot;</span><span class="s2">, </span><span class="s1">num1 </span><span class="s2">/ </span><span class="s1">num2</span><span class="s2">);</span>
+                <span class="s2">}</span>
+            <span class="s2">}</span>
+            <span class="s0">default </span><span class="s1">-&gt; System</span><span class="s2">.</span><span class="s1">out</span><span class="s2">.</span><span class="s1">println</span><span class="s2">(</span><span class="s4">&quot;Opção inválida.&quot;</span><span class="s2">);</span>
+        <span class="s2">}</span>
+
+        <span class="s1">sc</span><span class="s2">.</span><span class="s1">close</span><span class="s2">();</span>
+    <span class="s2">}</span>
+<span class="s2">}</span>
+</pre>
+</body>
+</html>
